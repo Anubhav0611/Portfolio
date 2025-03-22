@@ -1,0 +1,156 @@
+NOTES-CSS:
+
+1. float tbhi krte elements ko jab width dete unme
+
+2. padding agr di to hume width decrease krni pdegi
+
+3. float / flexbox/ grid : sab layout banane ke kaam aate hai - flexbox and grid bdhiya hota hai
+
+4. clear is basically overlapping hatane ke lie ata hai .
+
+5. jo bhi properties lagti hai generally parent element se lagti hai {generally web browser ke borders se bhi aaskti}
+
+6. relative position : from original pos
+***** static pos me left right top bottom ka koi frk nhi pdta , margin ka pdta 
+
+7. absolute : from parent ****************** absolute derhe ho to try kro uske parent ko relative dene ka
+
+8. jiski z-index jyada wo upr aaega.
+
+9. z index ke lie position dena jaruri hota 
+
+10. inline me width set nhi krskte ,, block me krskte hai ........
+
+11. display set krni pdti hai ,,  best : inline-block (inline bhi hojaenge + width bhi set krskte)
+
+12 . overflow use krte hai jab aapka size bda hi container se to usko handle krne ke lie 
+      overflow:property ;    [property - 1.visible: usse kuch frk nhi pdta
+							2.hidden : jo overflow horha part wo hat jaaega.
+						 	 3.scroll/auto : jo hata part hai use scroll krke access krskte  
+								but "auto" me sirf jahan jarurat hai whi scroll border aaega lekin "scroll" me dono jagah aajaega
+
+13. before me jo background lagta usme content:"";  , position absolute, top/left:0;,z-index:-1;
+
+14.background: #ffffff url("img_tree.png") no-repeat right top;   ------SHORTHAND
+
+
+15
+
+
+
+
+
+
+
+
+
+                          	 			 FLEXBOX
+
+
+
+IT IS USED TO DESIGN LAYOUT - SAME LIKE DISPLAY METHODS -- BETTER WAY TO ALIGN  ITEMS
+
+FLEXBOX HAS 1.CONTAINER 2. FLEX ITEMS [container ke andar]
+
+container ke andar many elements. 
+
+
+
+i)
+display : flex;  --container me krte hai 
+
+ii)
+item 2 tarike se rkhte ------- row wise , column wise.....
+
+iii)
+"CONTAINER" ke lie alg flexbox properties hoti hai and "ITEM" ke lie alg
+
+
+
+
+:::::::::::::::::::CONTAINER PROPERTIES:::::::::::::::::::::
+
+a) ""flex-direction :row (by default)""   ------ row wise fill honge itemsss   /////// ""flex-direction: column""------column wise align honge items
+
+flex- direction : row reverse ---------------- ITEMS ROW ME REVERSE HOJAENGE THAT IS PEHLA BOX AND ME AND LAST BOX FIRST PR
+
+			/column-reverse
+
+
+
+
+b) flex-wrap:wrap -------------- isse thodi responsive banjaati hai ki jo items row me arranged the jab aap screen change kroge to wo arrange hote jaenge khud se  ek ke neeche ek ....
+
+no wrap by default hota hai 
+
+wrap-reverse se ulte wrap hote and initially row wise lekin container ke bottom pr 
+
+
+
+
+c) 	DONO KE LIE SHORT HAND
+ flex-flow: flex-direction   flex-wrap;
+
+
+
+
+d)	 "justify-content"  se horizontally cheezo me change aata hai ......
+
+justify-content: centre   ------------- se saara item center me aajaenge......
+justify-content: space-between  ----------se  items ke beech me equal space ajaata hai but  side border se nhi
+justify-content: space-evenly  ----------se  items ke beech me equal space ajaata hai ,side border se bhi
+justify-content: space-around ------------ se har item ke dono side left and right me equal space aajata
+
+
+
+e) 	"align-items"  se vertically position set krta hai items ko...............
+
+align-item:center  ::::: poori row vertically centre .
+align-items : stretch;     ---------------- wrap ke time pr vertically equally space
+
+
+
+
+
+
+
+
+
+:::::::::::::::::::::::::::::::::::: FOR ITEMS ::::::::::::::::::::::::::::::::::::::::::;;;
+
+particular items ke andar lagana ---- alg item ke lie alg property 
+
+A) order:N;           N is basically +ive integer --////---  Jiska jyada hoga order wo row me last me aaega  i.e jiska jitna jyada wo utna peeche.....
+
+
+B) flex-grow : N    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;//////////////////// Jab hum screen ka size bdhaenge to jiska yeh jyada hoga wo jyada felega
+
+
+c) flex-shrink : N    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;//////////////////// Jab hum screen ka size ghatega to jiska yeh jyada hoga wo jyada chota hogaaaaa
+
+
+
+d)flex- basis : is basically sets width when flex-direction is row ;;;;;;;;;;;;;;;; is basically sets height when flex-direction is column
+
+
+
+
+
+flex: flexgrow  flexshrink  flexbasis  [[[[short hand property]]]]
+
+
+
+
+e) align-self:  flex-start  //////   flex-end   //////   center          ::::::us item ki position container ke respect me 
+
+
+
+
+
+
+STEPS:  NORMALLY ITEMS ADD KRO , FIR USKE CONTAINER KI DISPLAY KO FLEX KRO 
+
+
+
+
+
